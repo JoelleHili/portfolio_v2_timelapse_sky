@@ -19,7 +19,7 @@
 </section>
 
 <style>
-	@import '/src/styles/_variables.css';
+	@import '/styles/_variables.css';
 
 	.nav-selection {
 		display: flex;

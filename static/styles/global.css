@@ -1,4 +1,5 @@
-@import "./_variables.css";
+@import "/styles/_variables.css";
+
 body {
 	height: 100dvh;
 	overflow: hidden;

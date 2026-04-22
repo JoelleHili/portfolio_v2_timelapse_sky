@@ -1,24 +1,29 @@
 <script>
 	import SunNavigation from '../components/SunNavigation/sunNavigation.svelte';
-	import LinkedIn from '../lib/linkedin.svg?raw';
-	import GitHub from '../lib/github.svg?raw';
+	import LinkedIn from '/linkedin.svg?raw';
+	import GitHub from '/github.svg?raw';
 
 	let { children } = $props();
 </script>
 
-<img class="noise" src="/src/lib/noise.svg" alt="Noise" />
+<img class="noise" src="/noise.svg" alt="Noise" />
 
 <section class="social">
 	<a href="https://github.com/JoelleHili" target="_blank" rel="nofollow" aria-label="github-link">
 		{@html GitHub}
 	</a>
 
-	<a href="https://www.linkedin.com/in/joelle-hili-a89366164/" target="_blank" rel="nofollow" aria-label="linkedin-link">
+	<a
+		href="https://www.linkedin.com/in/joelle-hili-a89366164/"
+		target="_blank"
+		rel="nofollow"
+		aria-label="linkedin-link"
+	>
 		{@html LinkedIn}
 	</a>
 </section>
 
-<img class="clouds" src="/src/lib/clouds.svg" alt="Clouds" />
+<img class="clouds" src="/clouds.svg" alt="Clouds" />
 
 <nav>
 	<SunNavigation />
@@ -29,8 +34,8 @@
 </section>
 
 <style>
-	@import '/src/styles/_variables.css';
-	
+	@import '/styles/_variables.css';
+
 	.noise {
 		mix-blend-mode: darken;
 		position: fixed;

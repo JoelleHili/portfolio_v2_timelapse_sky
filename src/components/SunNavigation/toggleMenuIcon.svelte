@@ -27,8 +27,7 @@
 {/if}
 
 <style>
-	@import '/src/styles/_variables.css';
-
+	@import '/styles/_variables.css';
 
 	.menu-icon {
 		position: fixed;

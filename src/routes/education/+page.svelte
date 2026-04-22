@@ -14,7 +14,7 @@
 {#each data.educationData as edu}
 	<section class="education__entry">
 		<section class="education__entry__title">
-			<img class="education__entry__icon" src={`/src/lib/${edu.icon}.svg`} alt={edu.icon} height="24px" width="24px" />
+			<img class="education__entry__icon" src={`${edu.icon}.svg`} alt={edu.icon} height="24px" width="24px" />
 			<h2>{edu.title}</h2>
 		</section>
 		<p class="education__entry__info">
@@ -25,7 +25,6 @@
 {/each}
 
 <style>
-
     .education__entry{
         margin-right: 10dvw;
         display: block;
