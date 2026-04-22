@@ -1,4 +1,4 @@
-import { aboutData } from './aboutData.ts';
+import { aboutData } from '../data/aboutData.ts'
 
 export function load() {
 	return aboutData;
