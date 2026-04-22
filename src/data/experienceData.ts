@@ -8,21 +8,17 @@ export const experienceData = [
 	},
 	{
 		companyName: 'Wyzer Ltd',
-		dateRange: '2021 - 2025',
-		stages: [
-			{
-				dateRange: '2023-2025',
-				role: 'Frontend Developer',
-				description:
-					'Designed and developed complete product interfaces with a focus on user experience. Built React components and pages using Next.js and Ant Design, styled with SASS. Was responsible for end-to-end front-end implementation and design consistency across projects.'
-			},
-			{
-				dateRange: '2021-2023',
-				role: 'Junior Developer',
-				description:
-					'Designed a full dashboard UI in Figma and contributed to front-end and back-end development. Developed and maintained APIs using Elixir and tested them via Postman. Built responsive components and pages in React (HeadlessUI, TailwindCSS) and Vue.js (Bootstrap). Created dynamic forms, wizards, and automated processes using FormJS, Formily, and Zeebe.'
-			}
-		]
+		dateRange: '2021 - 2023',
+		role: 'Junior Developer',
+		description:
+			'Designed a full dashboard UI in Figma and contributed to front-end and back-end development. Developed and maintained APIs using Elixir and tested them via Postman. Built responsive components and pages in React (HeadlessUI, TailwindCSS) and Vue.js (Bootstrap). Created dynamic forms, wizards, and automated processes using FormJS, Formily, and Zeebe.'
+	},
+	{
+		companyName: 'Wyzer Ltd',
+		dateRange: '2023 - 2025',
+		role: 'Frontend Developer',
+		description:
+			'Designed and developed complete product interfaces with a focus on user experience. Built React components and pages using Next.js and Ant Design, styled with SASS. Was responsible for end-to-end front-end implementation and design consistency across projects.'
 	},
 	{
 		companyName: 'Malta Institute of Accountants',
