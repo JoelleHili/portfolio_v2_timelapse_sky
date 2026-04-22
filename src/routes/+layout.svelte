@@ -6,35 +6,47 @@
 	let { children } = $props();
 </script>
 
-<img class="noise" src="/noise.svg" alt="Noise" />
+<section class="app">
+	<img class="noise" src="/noise.svg" alt="Noise" />
 
-<section class="social">
-	<a href="https://github.com/JoelleHili" target="_blank" rel="nofollow" aria-label="github-link">
-		{@html GitHub}
-	</a>
+	<section class="social">
+		<a href="https://github.com/JoelleHili" target="_blank" rel="nofollow" aria-label="github-link">
+			{@html GitHub}
+		</a>
 
-	<a
-		href="https://www.linkedin.com/in/joelle-hili-a89366164/"
-		target="_blank"
-		rel="nofollow"
-		aria-label="linkedin-link"
-	>
-		{@html LinkedIn}
-	</a>
-</section>
+		<a
+			href="https://www.linkedin.com/in/joelle-hili-a89366164/"
+			target="_blank"
+			rel="nofollow"
+			aria-label="linkedin-link"
+		>
+			{@html LinkedIn}
+		</a>
+	</section>
 
-<img class="clouds" src="/clouds.svg" alt="Clouds" />
+	<img class="clouds" src="/clouds.svg" alt="Clouds" />
 
-<nav>
-	<SunNavigation />
-</nav>
+	<nav class="nav">
+		<SunNavigation />
+	</nav>
 
-<section class="content">
-	{@render children()}
+	<section class="content">
+		{@render children()}
+	</section>
 </section>
 
 <style>
 	@import '/styles/_variables.css';
+
+	.app {
+		min-height: 100dvh;
+		background: var(--background);
+	}
+
+	.nav {
+		display: flex;
+		justify-content: center;
+	}
 
 	.noise {
 		mix-blend-mode: darken;
@@ -46,6 +58,7 @@
 	}
 
 	.content {
+		margin-top: calc(clamp(40px, 18svh, 320px) + 8px);
 		margin-left: clamp(16px, 5vw, 160px);
 	}
 
@@ -54,6 +67,7 @@
 		transform: translateX(var(--cloud-transform));
 		transition-duration: 3s;
 		pointer-events: none;
-		height: clamp(40px, 18dvh, 320px);
+		height: clamp(40px, 18svh, 320px);
+		position: fixed;
 	}
 </style>

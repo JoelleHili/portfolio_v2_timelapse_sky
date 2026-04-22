@@ -1,13 +1,9 @@
 @import "/styles/_variables.css";
 
-body {
-	height: 100dvh;
+html, body {
+	height: 100%;
 	overflow: hidden;
 	margin: 0px;
-}
-
-body {
-	background: var(--background);
 }
 
 h1 {
