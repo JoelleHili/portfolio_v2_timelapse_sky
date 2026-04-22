@@ -54,6 +54,6 @@
 		transform: translateX(var(--cloud-transform));
 		transition-duration: 3s;
 		pointer-events: none;
-		height: clamp(40px, 16dvh, 126px);
+		height: clamp(40px, 18dvh, 320px);
 	}
 </style>
