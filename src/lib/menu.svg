@@ -1,0 +1,5 @@
+<svg class="menu-icon" width="64" height="64" viewBox="0 0 64 64" fill="#0B3C49" xmlns="http://www.w3.org/2000/svg">
+    <rect class="menu-icon__top" height="8" width="64" x="0" y="12" rx="4"></rect>
+    <rect class="menu-icon__middle" height="8" width="64" x="0" y="28" rx="4"></rect>
+    <rect class="menu-icon__bottom" height="8" width="64" x="0" y="44" rx="4"></rect>
+</svg>

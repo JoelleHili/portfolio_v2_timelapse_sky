@@ -1,0 +1,38 @@
+:root {
+	--text-color: #f1f7ee;
+	--link-text-color: #0b3c49;
+	--menu-size: clamp(124px, 20dvh ,200px);
+	--menu-size-hovering: calc(var(--menu-size) + 20px);
+}
+[data-theme="Morning"] {
+	--accent-color: #468189;
+	--background: linear-gradient(to top, #cf5c36 0%, #468189 50%);
+	--cloud-visibily: block;
+	--cloud-transform: -10rem;
+	--menu-color: #ffc15d;
+	--menu-glow: 0px 0px 20px 8px #ffc15d;
+}
+[data-theme="Noon"] {
+	--accent-color: #468189;
+	--background: linear-gradient(to top, #f1f7ee 0%, #468189 33%);
+	--cloud-visibily: block;
+	--cloud-transform: -20rem;
+	--menu-color: #ffe8bb;
+	--menu-glow: 0px 0px 20px 16px #ffe8bb;
+}
+[data-theme="Evening"] {
+	--accent-color: #0b3c49;
+	--background: linear-gradient(to top, #cf5c36 0%, #0b3c49 33%);
+	--cloud-visibily: block;
+	--cloud-transform: -30rem;
+	--menu-color: #ffc15d;
+	--menu-glow: 0px 0px 20px 8px #ffc15d;
+}
+[data-theme="Night"] {
+	--accent-color: #030f12;
+	--background: linear-gradient(to top, #030f12 0%, #030f12 50%);
+	--cloud-visibily: none;
+	--cloud-transform: -0rem;
+	--menu-color: #ffe8bb;
+	--menu-glow: 0px 0px 8px 4px #ffe8bb;
+}

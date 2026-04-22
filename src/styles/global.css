@@ -1,0 +1,82 @@
+@import "./_variables.css";
+body {
+	height: 100dvh;
+	overflow: hidden;
+	margin: 0px;
+}
+
+body {
+	background: var(--background);
+}
+
+h1 {
+	font-family: "Fascinate", system-ui;
+	font-weight: 400;
+	font-style: normal;
+	color: var(--text-color);
+	font-size: clamp(40px, 5vw, 900px);
+	margin: 0px;
+}
+
+h2 {
+	font-family: "Fascinate", system-ui;
+	font-weight: 400;
+	font-style: normal;
+	color: var(--text-color);
+	font-size: clamp(24px, 3vw, 600px);
+	margin: 0px;
+}
+
+p {
+	font-family: "Comic Neue", cursive;
+	font-weight: 700;
+	font-style: normal;
+	color: var(--text-color);
+	font-size: clamp(16px, 2vw, 400px);
+}
+
+label {
+	font-family: "Comic Neue", cursive;
+	font-weight: 700;
+	font-style: normal;
+	color: var(--link-text-color);
+	font-size: clamp(12px, 2vw, 600px);
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+title {
+	display: none;
+}
+
+.social {
+	background: var(--text-color);
+	z-index: 100;
+	right: -16px;
+	top: 0;
+	position: fixed;
+	display: flex;
+	gap: 16px;
+	height: fit-content;
+	width: fit-content;
+	padding: 8px 24px;
+	border-radius: 28px 0px 0px 32px;
+	box-shadow: 4px 4px 4px 0 #00000025;
+
+	& svg {
+		color: var(--accent-color);
+
+		height: 32px;
+		width: 32px;
+		display: block;
+		transition-duration: 0.3s;
+
+		&:hover {
+			filter: brightness(0.6);
+			transition-duration: 0.3s;
+		}
+	}
+}

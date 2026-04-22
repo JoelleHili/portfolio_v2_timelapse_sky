@@ -1,0 +1,40 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_n_2041_16)">
+<g clip-path="url(#clip0_2041_16)">
+<g filter="url(#filter1_d_2041_16)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M61.2758 94.9836C73.0673 83.0847 88.4632 74.9312 104.805 71.6356C105.331 71.5295 105.84 71.8514 106.087 72.3281C112.287 84.2827 118.99 105.857 120.505 140.663C121.988 174.731 118.905 197.969 111.6 219.966C111.501 220.263 110.35 222.915 109.361 225.273C108.506 227.31 106.128 229 103.919 229H49.0434C36.2039 229 23.443 223.667 14.364 214.505C5.28515 205.344 0 192.467 0 179.51C0 166.554 5.28515 153.681 14.364 144.519C20.6837 138.142 28.7894 133.629 37.4621 131.471C38.476 131.219 39.5488 131.41 40.4141 131.995C45.8439 135.67 50.6573 140.49 53.4639 146.584C54.6251 149.105 57.5972 150.202 60.1025 149.033C62.6078 147.865 63.6972 144.874 62.5361 142.353C58.3866 133.342 51.2389 126.876 44.1387 122.437C43.7078 122.168 43.474 121.635 43.6757 121.168C47.8807 111.442 53.8377 102.489 61.2758 94.9836ZM130.495 140.223C129.174 109.866 124 88.6371 118.159 74.5861C117.267 72.4395 118.719 70 121.043 70C143.171 70 165.164 79.1944 180.811 94.9836C182.425 96.6122 183.968 98.3098 185.438 100.069C185.819 100.525 186.088 101.066 186.228 101.644C190.305 118.466 191.719 132.155 191.753 139.933C191.765 142.712 194.014 144.955 196.775 144.943C199.536 144.931 201.765 142.668 201.753 139.89C201.724 133.228 200.813 123.178 198.489 111.001C198.041 108.656 199.69 106.399 202.077 106.344C202.544 106.333 203.011 106.328 203.478 106.328C220.689 106.328 237.792 113.478 249.962 125.759C253.634 129.464 256.842 133.623 259.532 138.101C259.805 138.556 259.978 139.062 260.046 139.588C260.793 145.335 261.385 151.578 261.778 158.348C261.863 159.808 261.939 161.293 262.005 162.802C263.048 186.768 260.139 209.063 255.771 227.854C255.627 228.476 255.122 229 254.483 229H207.026C204.576 229 202.709 226.818 202.994 224.384C203.712 218.26 203.736 213.963 203.753 209.901C203.765 207.123 201.536 204.86 198.775 204.848C196.014 204.836 193.765 207.079 193.753 209.858C193.732 214.811 193.705 219.764 192.369 228.209C192.301 228.642 191.951 229 191.512 229H123.689C120.972 229 119.043 226.354 119.824 223.752C126.488 201.542 131.894 172.37 130.495 140.223ZM266.404 226.147C266.088 227.611 267.198 229 268.696 229C276.891 229 285.038 225.597 290.833 219.75C296.628 213.902 300 205.681 300 197.411C300 189.14 296.628 180.924 290.833 175.076C286.936 171.144 281.976 168.319 276.652 166.89C274.301 166.259 272.189 168.204 272.209 170.638C272.377 190.856 269.956 209.708 266.404 226.147Z" fill="#F1F7EE"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_n_2041_16" x="0" y="0" width="300" height="300" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="1 1" stitchTiles="stitch" numOctaves="3" result="noise" seed="397" />
+<feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
+<feComponentTransfer in="alphaNoise" result="coloredNoise1">
+<feFuncA type="discrete" tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
+</feComponentTransfer>
+<feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+<feFlood flood-color="rgba(0, 0, 0, 0.1)" result="color1Flood" />
+<feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
+<feMerge result="effect1_noise_2041_16">
+<feMergeNode in="shape" />
+<feMergeNode in="color1" />
+</feMerge>
+</filter>
+<filter id="filter1_d_2041_16" x="0" y="70" width="308" height="167" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="4" dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2041_16"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2041_16" result="shape"/>
+</filter>
+<clipPath id="clip0_2041_16">
+<rect width="300" height="300" rx="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>
