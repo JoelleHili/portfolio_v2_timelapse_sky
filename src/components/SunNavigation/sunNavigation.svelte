@@ -74,7 +74,7 @@
 		background-color: var(--menu-color);
 		box-shadow: var(--menu-glow);
 		bottom: calc((var(--menu-size)/3)*-1);
-		left: calc(50% - (var(--menu-size) / 2));
+		/* left: calc(50% - (var(--menu-size) / 2)); */
 		z-index: 100;
 		width: var(--menu-size);
 		height: var(--menu-size);
@@ -86,7 +86,7 @@
 	.sun-navigation:hover {
 		width: var(--menu-size-hovering);
 		height: var(--menu-size-hovering);
-		left: calc(50% - (var(--menu-size-hovering) / 2));
+		/* left: calc(50% - (var(--menu-size-hovering) / 2)); */
 		box-shadow: none;
 		transition: all 1s ease-out;
 		cursor: pointer;
@@ -98,8 +98,8 @@
 	[popover] {
 		border: 0;
 		bottom: 0;
-		width: 100dvw;
-		height: 100dvh;
+		width: 100%;
+		height: 100%;
 		background-color: var(--menu-color);
 		z-index: 1;
 
