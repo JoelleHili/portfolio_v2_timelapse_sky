@@ -6,7 +6,7 @@
 }
 [data-theme="Morning"] {
 	--accent-color: #468189;
-	--background: linear-gradient(to top, #cf5c36 0%, #468189 50%);
+	--background: linear-gradient(to top, #cf5c36 0%, #468189 33%);
 	--cloud-visibily: block;
 	--cloud-transform: -10rem;
 	--menu-color: #ffc15d;
