@@ -9,7 +9,7 @@
 	});
 </script>
 
-<title>My Education</title>
+<title>Education</title>
 
 {#each data.educationData as edu}
 	<section class="education__entry">

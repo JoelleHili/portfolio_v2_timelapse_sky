@@ -27,7 +27,7 @@
 	let selectedJob = $derived(data.experienceData.find((x) => x.dateRange === selectedDate));
 </script>
 
-<title>My Experience</title>
+<title>Experience</title>
 
 <section class="experience">
 	<section class="experience__entry">
