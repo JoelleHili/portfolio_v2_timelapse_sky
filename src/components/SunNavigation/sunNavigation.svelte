@@ -4,7 +4,7 @@
 	const closePopover = () => {
 		const popover = document.getElementById('navigation-popover');
 		popover?.hidePopover();
-	}
+	};
 </script>
 
 <button
@@ -56,7 +56,7 @@
 		}
 	}
 
-	.nav-popover{
+	.nav-popover {
 		display: flex;
 		justify-content: center;
 	}
@@ -101,21 +101,21 @@
 		position: fixed;
 		border: 0px;
 		border-radius: 100%;
-		transition: all 1s ease-out;
+		transition: all 0.75s ease, background-color 0s, box-shadow 0s;
 	}
 	.sun-navigation:hover {
 		width: var(--menu-size-hovering);
 		height: var(--menu-size-hovering);
 		/* left: calc(50% - (var(--menu-size-hovering) / 2)); */
 		box-shadow: none;
-		transition: all 1s ease-out;
+		transition: all 0.75s ease;
 		cursor: pointer;
 	}
 	.sun-navigation:focus {
 		outline: none;
 	}
 
-	.sun-navigation__hide{
+	.sun-navigation__hide {
 		z-index: 100;
 		align-self: center;
 	}
