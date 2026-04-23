@@ -1,5 +1,10 @@
 <script>
 	import ToggleMenuIcon from './toggleMenuIcon.svelte';
+
+	const closePopover = () => {
+		const popover = document.getElementById('navigation-popover');
+		popover?.hidePopover();
+	}
 </script>
 
 <button
@@ -13,9 +18,9 @@
 
 <section class="nav-popover" popover id="navigation-popover">
 	<section class="nav-selection">
-		<a class="nav-link" href="/">ABOUT</a>
-		<a class="nav-link" href="/experience">EXPERIENCE</a>
-		<a class="nav-link" href="/education">EDUCATION</a>
+		<a class="nav-link" href="/" onclick={closePopover}>ABOUT</a>
+		<a class="nav-link" href="/experience" onclick={closePopover}>EXPERIENCE</a>
+		<a class="nav-link" href="/education" onclick={closePopover}>EDUCATION</a>
 	</section>
 
 	<button

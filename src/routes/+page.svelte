@@ -2,9 +2,6 @@
 	let { data } = $props();
 
 	$effect(() => {
-		const popover = document.getElementById("navigation-popover");
-        popover?.hidePopover();
-		
 		document.body.dataset.theme = 'Morning';
 	});
 </script>
