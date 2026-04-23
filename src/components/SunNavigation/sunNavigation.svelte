@@ -124,7 +124,7 @@
 		z-index: 1;
 
 		clip-path: circle(0% at 50% 100%);
-		transition: clip-path 1s ease-out;
+		transition: clip-path 0.75s ease;
 	}
 
 	[popover]:popover-open {
