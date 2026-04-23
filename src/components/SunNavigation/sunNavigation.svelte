@@ -2,18 +2,28 @@
 	import ToggleMenuIcon from './toggleMenuIcon.svelte';
 </script>
 
-<button class="sun-navigation" popovertarget="navigation-popover" popovertargetaction="show" aria-label="open-nav-button">
+<button
+	class="sun-navigation"
+	popovertarget="navigation-popover"
+	popovertargetaction="show"
+	aria-label="open-nav-button"
+>
 	<ToggleMenuIcon isOpen={false} />
 </button>
 
-<section popover id="navigation-popover">
+<section class="nav-popover" popover id="navigation-popover">
 	<section class="nav-selection">
 		<a class="nav-link" href="/">ABOUT</a>
 		<a class="nav-link" href="/experience">EXPERIENCE</a>
 		<a class="nav-link" href="/education">EDUCATION</a>
 	</section>
 
-	<button class="sun-navigation" popovertarget="navigation-popover" popovertargetaction="hide" aria-label="close-nav-button">
+	<button
+		class="sun-navigation sun-navigation__hide"
+		popovertarget="navigation-popover"
+		popovertargetaction="hide"
+		aria-label="close-nav-button"
+	>
 		<ToggleMenuIcon isOpen={true} />
 	</button>
 </section>
@@ -39,6 +49,11 @@
 			flex-direction: row;
 			gap: 5dvw;
 		}
+	}
+
+	.nav-popover{
+		display: flex;
+		justify-content: center;
 	}
 
 	.nav-link {
@@ -73,9 +88,9 @@
 	.sun-navigation {
 		background-color: var(--menu-color);
 		box-shadow: var(--menu-glow);
-		bottom: calc((var(--menu-size)/3)*-1);
+		bottom: calc((var(--menu-size) / 3) * -1);
 		/* left: calc(50% - (var(--menu-size) / 2)); */
-		z-index: 100;
+		z-index: 99;
 		width: var(--menu-size);
 		height: var(--menu-size);
 		position: fixed;
@@ -95,6 +110,11 @@
 		outline: none;
 	}
 
+	.sun-navigation__hide{
+		z-index: 100;
+		align-self: center;
+	}
+
 	[popover] {
 		border: 0;
 		bottom: 0;
@@ -103,18 +123,13 @@
 		background-color: var(--menu-color);
 		z-index: 1;
 
-		clip-path: circle(200% at 50% 100%);
+		clip-path: circle(0% at 50% 100%);
 		transition: clip-path 1s ease-out;
 	}
 
 	[popover]:popover-open {
+		clip-path: circle(200% at 50% 100%);
 		z-index: 1;
-	}
-
-	@starting-style {
-		[popover] {
-			clip-path: circle(200% at 50% 100%);
-		}
 	}
 	@starting-style {
 		[popover]:popover-open {
