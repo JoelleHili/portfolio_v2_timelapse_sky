@@ -37,7 +37,7 @@ label {
 	font-weight: 700;
 	font-style: normal;
 	color: var(--link-text-color);
-	font-size: clamp(10px, 2vw, 600px);
+	font-size: clamp(12px, 2vw, 600px);
 }
 
 a {

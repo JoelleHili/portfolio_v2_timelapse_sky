@@ -22,14 +22,14 @@
 		padding: 8px;
 		background-color: #f1f7ee;
 		border-radius: 16px;
-		gap: clamp(2px, 0.5rem, 16px);
+		gap: clamp(0px, 0.2rem, 16px);
 		align-self: center;
 		display: flex;
 		width: fit-content;
 		box-shadow: inset 8px 4px 2px 0px #00000025;
 		height: fit-content;
-		justify-content: space-between;
-        margin-right: clamp(16px, 5vw, 160px);
+		justify-content: center;
+        margin-right: clamp(8px, 5vw, 160px);
 	}
 
 	@media only screen and (min-width: 1024px) {
@@ -54,7 +54,7 @@
 	}
 
 	label {
-		padding: 4px 8px;
+		padding: 4px 6px;
 		border-radius: 8px;
 
         cursor: pointer;

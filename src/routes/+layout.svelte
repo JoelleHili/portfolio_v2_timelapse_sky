@@ -59,7 +59,7 @@
 
 	.content {
 		margin-top: calc(clamp(40px, 18svh, 320px) + 8px);
-		margin-left: clamp(16px, 5vw, 160px);
+		margin-left: clamp(8px, 5vw, 160px);
 	}
 
 	.clouds {
