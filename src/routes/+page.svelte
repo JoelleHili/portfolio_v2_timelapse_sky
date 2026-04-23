@@ -19,6 +19,6 @@
 
 <style scoped>
 	.about {
-		width: clamp(360px, 75dvw, 2000px);
+		width: clamp(320px, 75dvw, 2000px);
 	}
 </style>
