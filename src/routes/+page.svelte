@@ -10,7 +10,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<title>Joelle Hili</title>
+	<title>Joelle Hili | A Frontend Dev</title>
 	<meta name="description" content="Learn more about Joelle Hili, her background, interests, and personal journey." />
 	<meta name="author" content="Joelle Hili" />
 	<link rel="canonical" href="https://joellehili.com/" />
