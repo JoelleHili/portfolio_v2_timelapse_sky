@@ -4,6 +4,8 @@
 	import GitHub from '/github.svg?raw';
 
 	let { children } = $props();
+
+	export const prerender = true;
 </script>
 
 <section class="app">
