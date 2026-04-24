@@ -30,9 +30,9 @@
 		<SunNavigation />
 	</nav>
 
-	<section class="content">
+	<main class="content">
 		{@render children()}
-	</section>
+	</main>
 </section>
 
 <style>
