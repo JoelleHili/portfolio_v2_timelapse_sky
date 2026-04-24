@@ -6,7 +6,27 @@
 	});
 </script>
 
-<title>Education</title>
+<svelte:head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Education | Joelle Hili</title>
+	<meta name="description" content="Explore the educational background, qualifications, and academic history of Joelle Hili." />
+	<meta name="author" content="Joelle Hili" />
+
+    <meta property="og:title" content="Education | Joelle Hili" />
+	<meta property="og:description" content="Explore the educational background, qualifications, and academic history of Joelle Hili." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://joellehili.com/education" />
+	<meta property="og:image" content="https://joellehili.com/education-preview.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Education | Joelle Hili" />
+	<meta name="twitter:description" content="Explore the educational background, qualifications, and academic history of Joelle Hili." />
+	<meta name="twitter:image" content="https://joellehili.com/education-preview.png" />
+
+	<meta name="theme-color" content="#0B3C49" />
+</svelte:head>
 
 {#each data.educationData as edu}
 	<section class="education__entry">

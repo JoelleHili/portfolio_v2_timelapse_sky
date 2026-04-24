@@ -24,7 +24,28 @@
 	let selectedJob = $derived(data.experienceData.find((x) => x.dateRange === selectedDate));
 </script>
 
-<title>Experience</title>
+<svelte:head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Experience | Joelle Hili</title>
+	<meta name="description" content="Explore the professional experience, roles, and work history of Joelle Hili." />
+	<meta name="author" content="Joelle Hili" />
+	<link rel="canonical" href="https://joellehili.com/experience" />
+
+	<meta property="og:title" content="Experience | Joelle Hili" />
+	<meta property="og:description" content="Explore the professional experience, roles, and work history of Joelle Hili." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://joellehili.com/experience" />
+	<meta property="og:image" content="https://joellehili.com/experience-preview.png" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Experience | Joelle Hili" />
+	<meta name="twitter:description" content="Explore the professional experience, roles, and work history of Joelle Hili." />
+	<meta name="twitter:image" content="https://joellehili.com/experience-preview.png" />
+
+	<meta name="theme-color" content="#468189" />
+</svelte:head>
 
 <section class="experience">
 	<section class="experience__entry">
