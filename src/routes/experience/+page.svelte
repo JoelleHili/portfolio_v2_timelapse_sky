@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import Tabs from '../../components/Tabs/tabs.svelte';
+	import { getGestureType } from '../../helper/touchHandler.ts';
 
 	let { data } = $props();
 
@@ -14,14 +16,33 @@
 		experienceData: IExperience[];
 	}
 
-	$effect(() => {
-		document.body.dataset.theme = 'Noon';
-	});
+	let scrollStartY = $state<number>();
+	let scrollEndY = $state<number>();
+	let scrollType = $derived(getGestureType(scrollStartY, scrollEndY));
 
 	let dates = data.experienceData.map((x) => x.dateRange);
 
 	let selectedDate = $state(data.experienceData[0].dateRange);
 	let selectedJob = $derived(data.experienceData.find((x) => x.dateRange === selectedDate));
+
+	$effect(() => {
+		document.body.dataset.theme = 'Noon';
+	});
+
+	$effect(() => {
+		console.log(scrollType);
+		
+		switch (scrollType) {
+			case 'swipeUp':
+				goto('/education');
+				break;
+			case 'swipeDown':
+				goto('/');
+				break;
+			default:
+				break;
+		}
+	});
 </script>
 
 <svelte:head>
@@ -29,25 +50,39 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<title>Experience | Joelle Hili</title>
-	<meta name="description" content="Explore the professional experience, roles, and work history of Joelle Hili." />
+	<meta
+		name="description"
+		content="Explore the professional experience, roles, and work history of Joelle Hili."
+	/>
 	<meta name="author" content="Joelle Hili" />
 	<link rel="canonical" href="https://joellehili.com/experience" />
 
 	<meta property="og:title" content="Experience | Joelle Hili" />
-	<meta property="og:description" content="Explore the professional experience, roles, and work history of Joelle Hili." />
+	<meta
+		property="og:description"
+		content="Explore the professional experience, roles, and work history of Joelle Hili."
+	/>
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://joellehili.com/experience" />
 	<meta property="og:image" content="https://joellehili.com/experience-preview.png" />
 
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Experience | Joelle Hili" />
-	<meta name="twitter:description" content="Explore the professional experience, roles, and work history of Joelle Hili." />
+	<meta
+		name="twitter:description"
+		content="Explore the professional experience, roles, and work history of Joelle Hili."
+	/>
 	<meta name="twitter:image" content="https://joellehili.com/experience-preview.png" />
 
 	<meta name="theme-color" content="#468189" />
 </svelte:head>
 
-<section class="experience">
+<section
+	class="experience"
+	role="application"
+	ontouchstart={(e) => (scrollStartY = e.changedTouches[0].screenY)}
+	ontouchend={(e) => (scrollEndY = e.changedTouches[0].screenY)}
+>
 	<section class="experience__entry">
 		{#if selectedJob}
 			<h1>{selectedJob.companyName}</h1>
@@ -74,7 +109,7 @@
 		}
 	}
 	.experience__entry {
-        padding-right: 10dvw;
+		padding-right: 10dvw;
 		width: clamp(320px, 75dvw, 2000px);
 	}
 </style>
