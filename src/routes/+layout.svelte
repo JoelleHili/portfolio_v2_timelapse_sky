@@ -1,38 +1,39 @@
-<script>
+<script lang="ts">
 	import SunNavigation from '../components/SunNavigation/sunNavigation.svelte';
 	import LinkedIn from '/linkedin.svg?raw';
 	import GitHub from '/github.svg?raw';
 	import { goto } from '$app/navigation';
-	import { getGestureType } from '../helper/touchHandler.ts';
+	import { getVerticalSwipeType } from '../helper/touchHandler.ts';
 	import { pages } from '../data/routes.ts';
 	import { page } from '$app/state';
 
 	let { children } = $props();
 
-	let scrollStartY = $state();
-	let scrollEndY = $state();
-	let scrollType = $derived(getGestureType(scrollStartY, scrollEndY));
+	let scrollY = $state({ start: 0, end: 0 });
 
-	export const prerender = true;
+	const handleSwipe = (e: TouchEvent) => {
+		scrollY.end = e.changedTouches[0].screenY
 
-	$effect(() => {
+		let scrollType = getVerticalSwipeType(scrollY)
 		let pageIndex = pages.findIndex((p) => p === page.url.pathname);
-		
+
 		if (scrollType === 'swipeUp' && pageIndex < pages.length - 1) {
 			goto(pages[pageIndex + 1]);
 		} else if (scrollType === 'swipeDown' && pageIndex > 0) {
 			goto(pages[pageIndex - 1]);
 		}
 
-		[scrollStartY, scrollEndY, scrollType] = [0,0,'']
-	});
+		scrollY = { start: 0, end: 0 };
+	}
+
+	export const prerender = true;
 </script>
 
 <section
 	class="app"
 	role="application"
-	ontouchstart={(e) => (scrollStartY = e.changedTouches[0].screenY)}
-	ontouchend={(e) => (scrollEndY = e.changedTouches[0].screenY)}
+	ontouchstart={(e) => (scrollY.start = e.changedTouches[0].screenY)}
+	ontouchend={(e) => handleSwipe(e)}
 >
 	<img class="noise" src="/noise.svg" alt="Noise" />
 

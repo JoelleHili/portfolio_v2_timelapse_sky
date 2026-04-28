@@ -1,10 +1,15 @@
-export const getGestureType = (touchStartY?: number, touchEndY?: number) => {
-	if (touchStartY && touchEndY) {
-		const touchDistance = touchStartY - touchEndY;
+interface IGestureTypes {
+	start: number,
+	end: number
+}
+
+export const getVerticalSwipeType = ({start, end}: IGestureTypes) => {
+	if (start && end) {
+		const touchDistance = start - end;
 		const touchFilter = 150;
 
-		if (touchEndY < touchStartY && Math.abs(touchDistance) > touchFilter) return 'swipeUp';
-		else if (touchEndY > touchStartY && Math.abs(touchDistance) > touchFilter) return 'swipeDown';
+		if (end < start && Math.abs(touchDistance) > touchFilter) return 'swipeUp';
+		else if (end > start && Math.abs(touchDistance) > touchFilter) return 'swipeDown';
 		else return '';
 	} else return '';
 };
