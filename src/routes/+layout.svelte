@@ -17,14 +17,14 @@
 
 	$effect(() => {
 		let pageIndex = pages.findIndex((p) => p === page.url.pathname);
-
+		
 		if (scrollType === 'swipeUp' && pageIndex < pages.length - 1) {
 			goto(pages[pageIndex + 1]);
 		} else if (scrollType === 'swipeDown' && pageIndex > 0) {
 			goto(pages[pageIndex - 1]);
 		}
 
-		scrollType = '';
+		[scrollStartY, scrollEndY, scrollType] = [0,0,'']
 	});
 </script>
 
