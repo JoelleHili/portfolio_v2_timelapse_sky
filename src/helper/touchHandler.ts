@@ -1,7 +1,10 @@
 export const getGestureType = (touchStartY?: number, touchEndY?: number) => {
 	if (touchStartY && touchEndY) {
-		if (touchEndY < touchStartY) return 'swipeUp';
-		else if (touchEndY > touchStartY) return 'swipeDown';
+		const touchDistance = touchStartY - touchEndY;
+		const touchFilter = 200;
+
+		if (touchEndY < touchStartY && Math.abs(touchDistance) > touchFilter) return 'swipeUp';
+		else if (touchEndY > touchStartY && Math.abs(touchDistance) > touchFilter) return 'swipeDown';
 		else return '';
 	} else return '';
 };
