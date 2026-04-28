@@ -1,29 +1,8 @@
 <script>
-	import { goto } from '$app/navigation';
-	import { getGestureType } from '../../helper/touchHandler.ts';
-
 	let { data } = $props();
-
-    let scrollStartY = $state();
-	let scrollEndY = $state();
-	let scrollType = $derived(getGestureType(scrollStartY, scrollEndY));
 
 	$effect(() => {
 		document.body.dataset.theme = 'Evening';
-	});
-
-    $effect(() => {
-		console.log(scrollType);
-
-		switch (scrollType) {
-			case 'swipeUp':
-				break;
-			case 'swipeDown':
-                goto('/experience');
-				break;
-			default:
-				break;
-		}
 	});
 </script>
 
@@ -60,9 +39,6 @@
 
 <section
 	class="education"
-	role="application"
-	ontouchstart={(e) => (scrollStartY = e.changedTouches[0].screenY)}
-	ontouchend={(e) => (scrollEndY = e.changedTouches[0].screenY)}
 >
 	{#each data.educationData as edu}
 		<section class="education__entry">

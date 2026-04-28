@@ -1,26 +1,9 @@
 <script>
-	import { getGestureType } from '../helper/touchHandler.ts';
-	import { goto } from '$app/navigation';
-
 	let { data } = $props();
-
-	let scrollStartY = $state();
-	let scrollEndY = $state();
-	let scrollType = $derived(getGestureType(scrollStartY, scrollEndY));
 
 	$effect(() => {
 		document.body.dataset.theme = 'Morning';
 	});
-
-	$effect(() => {
-		console.log(scrollType);
-
-		switch(scrollType){
-			case "swipeUp": goto('/experience'); break;
-			case "swipeDown": break;
-			default: break;
-		}
-	})
 </script>
 
 <svelte:head>
@@ -55,12 +38,7 @@
 	<meta name="theme-color" content="#468189" />
 </svelte:head>
 
-<section
-	class="about"
-	role="application"
-	ontouchstart={(e) => (scrollStartY = e.changedTouches[0].screenY)}
-	ontouchend={(e) => (scrollEndY = e.changedTouches[0].screenY)}
->
+<section class="about">
 	<h1>{data.title}</h1>
 	<h2>{data.subtitle}</h2>
 	<p>{@html data.description}</p>

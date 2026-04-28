@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import Tabs from '../../components/Tabs/tabs.svelte';
-	import { getGestureType } from '../../helper/touchHandler.ts';
 
 	let { data } = $props();
 
@@ -16,10 +14,6 @@
 		experienceData: IExperience[];
 	}
 
-	let scrollStartY = $state<number>();
-	let scrollEndY = $state<number>();
-	let scrollType = $derived(getGestureType(scrollStartY, scrollEndY));
-
 	let dates = data.experienceData.map((x) => x.dateRange);
 
 	let selectedDate = $state(data.experienceData[0].dateRange);
@@ -27,21 +21,6 @@
 
 	$effect(() => {
 		document.body.dataset.theme = 'Noon';
-	});
-
-	$effect(() => {
-		console.log(scrollType);
-		
-		switch (scrollType) {
-			case 'swipeUp':
-				goto('/education');
-				break;
-			case 'swipeDown':
-				goto('/');
-				break;
-			default:
-				break;
-		}
 	});
 </script>
 
@@ -77,12 +56,7 @@
 	<meta name="theme-color" content="#468189" />
 </svelte:head>
 
-<section
-	class="experience"
-	role="application"
-	ontouchstart={(e) => (scrollStartY = e.changedTouches[0].screenY)}
-	ontouchend={(e) => (scrollEndY = e.changedTouches[0].screenY)}
->
+<section class="experience">
 	<section class="experience__entry">
 		{#if selectedJob}
 			<h1>{selectedJob.companyName}</h1>
