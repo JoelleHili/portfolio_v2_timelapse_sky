@@ -16,11 +16,7 @@
 	export const prerender = true;
 
 	$effect(() => {
-		console.log('Scroll Type', scrollType);
-
 		let pageIndex = pages.findIndex((p) => p === page.url.pathname);
-		console.log('Page Index', pageIndex);
-		console.log('Pages Length', pages.length);
 
 		if (scrollType === 'swipeUp' && pageIndex < pages.length - 1) {
 			goto(pages[pageIndex + 1]);
