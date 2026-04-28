@@ -37,9 +37,7 @@
 	<meta name="theme-color" content="#0B3C49" />
 </svelte:head>
 
-<section
-	class="education"
->
+<section class="education">
 	{#each data.educationData as edu}
 		<section class="education__entry">
 			<section class="education__entry__title">
