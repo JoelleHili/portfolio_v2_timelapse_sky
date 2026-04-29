@@ -82,8 +82,8 @@
 		min-height: 100dvh;
 		background: linear-gradient(to top, var(--background-bottom) 0%, var(--background-top) 33%);
 		transition:
-			--background-bottom 0.75s ease-in,
-			--background-top 0.75s ease-in;
+			--background-bottom 0.75s ease-in-out,
+			--background-top 0.75s ease-in-out;
 	}
 
 	.nav {

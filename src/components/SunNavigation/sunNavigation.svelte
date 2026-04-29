@@ -100,7 +100,7 @@
 		position: fixed;
 		border: 0px;
 		border-radius: 100%;
-		transition: all 0.75s ease, background-color 0.75s ease-in, box-shadow 0.75s ease-in;
+		transition: all 0.75s ease, background-color 0.75s ease-in-out, box-shadow 0.75s ease-in-out;
 	}
 	.sun-navigation:hover {
 		width: var(--menu-size-hovering);
