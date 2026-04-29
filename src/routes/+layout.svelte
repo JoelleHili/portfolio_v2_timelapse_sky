@@ -12,9 +12,9 @@
 	let scrollY = $state({ start: 0, end: 0 });
 
 	const handleSwipe = (e: TouchEvent) => {
-		scrollY.end = e.changedTouches[0].screenY
+		scrollY.end = e.changedTouches[0].screenY;
 
-		let scrollType = getVerticalSwipeType(scrollY)
+		let scrollType = getVerticalSwipeType(scrollY);
 		let pageIndex = pages.findIndex((p) => p === page.url.pathname);
 
 		if (scrollType === 'swipeUp' && pageIndex < pages.length - 1) {
@@ -24,7 +24,7 @@
 		}
 
 		scrollY = { start: 0, end: 0 };
-	}
+	};
 
 	export const prerender = true;
 </script>
@@ -66,9 +66,24 @@
 <style>
 	@import '/styles/_variables.css';
 
+	@property --background-top {
+		syntax: '<color>';
+		inherits: true;
+		initial-value: #f1f7ee;
+	}
+
+	@property --background-bottom {
+		syntax: '<color>';
+		inherits: true;
+		initial-value: #f1f7ee;
+	}
+
 	.app {
 		min-height: 100dvh;
-		background: var(--background);
+		background: linear-gradient(to top, var(--background-bottom) 0%, var(--background-top) 33%);
+		transition:
+			--background-bottom 0.75s ease-in,
+			--background-top 0.75s ease-in;
 	}
 
 	.nav {

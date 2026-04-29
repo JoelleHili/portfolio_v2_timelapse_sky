@@ -94,19 +94,17 @@
 		background-color: var(--menu-color);
 		box-shadow: var(--menu-glow);
 		bottom: calc((var(--menu-size) / 3) * -1);
-		/* left: calc(50% - (var(--menu-size) / 2)); */
 		z-index: 99;
 		width: var(--menu-size);
 		height: var(--menu-size);
 		position: fixed;
 		border: 0px;
 		border-radius: 100%;
-		transition: all 0.75s ease, background-color 0s, box-shadow 0s;
+		transition: all 0.75s ease, background-color 0.75s ease-in, box-shadow 0.75s ease-in;
 	}
 	.sun-navigation:hover {
 		width: var(--menu-size-hovering);
 		height: var(--menu-size-hovering);
-		/* left: calc(50% - (var(--menu-size-hovering) / 2)); */
 		box-shadow: none;
 		transition: all 0.75s ease;
 		cursor: pointer;
@@ -126,10 +124,10 @@
 		width: 100%;
 		height: 100%;
 		background-color: var(--menu-color);
-		z-index: 1;
+		z-index: 5;
 
 		clip-path: circle(0% at 50% 100%);
-		transition: clip-path 0.75s ease;
+		transition: clip-path 0.75s ease, background-color 0.75s ease-in;
 	}
 
 	[popover]:popover-open {
