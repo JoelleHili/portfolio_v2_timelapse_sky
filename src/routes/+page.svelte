@@ -18,7 +18,7 @@
 	<meta name="author" content="Joelle Hili" />
 	<link rel="canonical" href="https://joellehili.com/" />
 
-	<meta property="og:title" content="About Me | Joelle Hili" />
+	<meta property="og:title" content="Joelle Hili" />
 	<meta
 		property="og:description"
 		content="Learn more about Joelle Hili, her background, interests, and personal journey."
