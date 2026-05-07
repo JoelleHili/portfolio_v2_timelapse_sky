@@ -19,6 +19,7 @@
 	<link rel="canonical" href="https://joellehili.com/" />
 
 	<meta property="og:title" content="Joelle Hili" />
+	<meta property="og:site_name" content="Joelle Hili" />
 	<meta
 		property="og:description"
 		content="Learn more about Joelle Hili, her background, interests, and personal journey."

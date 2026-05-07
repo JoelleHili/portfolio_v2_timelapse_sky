@@ -18,6 +18,7 @@
 	<meta name="author" content="Joelle Hili" />
 
 	<meta property="og:title" content="Education | Joelle Hili" />
+	<meta property="og:site_name" content="Joelle Hili | Education" />
 	<meta
 		property="og:description"
 		content="Explore the educational background, qualifications, and academic history of Joelle Hili."

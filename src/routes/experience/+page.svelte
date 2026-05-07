@@ -37,6 +37,8 @@
 	<link rel="canonical" href="https://joellehili.com/experience" />
 
 	<meta property="og:title" content="Experience | Joelle Hili" />
+	<meta property="og:site_name" content="Joelle Hili | Experience" />
+
 	<meta
 		property="og:description"
 		content="Explore the professional experience, roles, and work history of Joelle Hili."
