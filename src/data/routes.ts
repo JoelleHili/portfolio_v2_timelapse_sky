@@ -1,1 +1,1 @@
-export const pages = ['/', '/experience', '/education'];
+export const pages = ['/', '/experience', '/education', '/poems'];
