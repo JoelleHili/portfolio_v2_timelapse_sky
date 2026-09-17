@@ -92,12 +92,52 @@
 	}
 
 	.noise {
-		mix-blend-mode: darken;
+		mix-blend-mode: screen;
+		filter: invert(1);
 		position: fixed;
-		width: 200%;
-		height: 200%;
+		width: 100%;
+		height: 100%;
 		pointer-events: none;
 		z-index: 9999;
+		animation: noiseAnim 0.5s infinite;
+		transform: scale(150%);
+		opacity: 0.5;
+	}
+
+	@keyframes noiseAnim {
+		0% {
+			transform: rotateY(200deg);
+		}
+		19% {
+			transform: rotateY(0deg);
+		}
+		20% {
+			transform: rotateX(180deg);
+		}
+		39% {
+			transform: rotateY(0deg);
+		}
+		40% {
+			transform: rotateY(220deg);
+		}
+		59% {
+			transform: rotateY(0deg);
+		}
+		60% {
+			transform: rotateX(160deg);
+		}
+		79% {
+			transform: rotateY(0deg);
+		}
+		80% {
+			transform: rotateY(240deg);
+		}
+		99% {
+			transform: rotateY(0deg);
+		}
+		100% {
+			transform: rotateX(140deg);
+		}
 	}
 
 	.content {

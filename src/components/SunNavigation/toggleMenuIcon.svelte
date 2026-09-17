@@ -36,6 +36,7 @@
 		pointer-events: none;
 		height: calc(var(--menu-size)/3);
 		width: calc(var(--menu-size)/3);
+		fill: var(--accent-color);
 	}
 
 	.menu-icon__open {

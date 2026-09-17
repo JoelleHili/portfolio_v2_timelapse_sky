@@ -65,7 +65,7 @@
 		font-family: 'Fascinate', system-ui;
 		font-weight: 400;
 		font-style: normal;
-		color: var(--link-text-color);
+		color: var(--accent-color);
 		font-size: clamp(32px, 6vw, 56px);
 
 		margin: 0px;
@@ -81,7 +81,7 @@
 		border-radius: 4px;
 		bottom: 0;
 		left: 0;
-		background-color: #0b3c49;
+		background-color: var(--accent-color);
 		transform-origin: bottom right;
 		transition: transform 0.25s ease-out;
 	}
