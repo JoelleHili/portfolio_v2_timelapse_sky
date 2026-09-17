@@ -33,8 +33,12 @@ export const orderPoems = ({ poems, type, direction }: IOrderPoems) => {
 
 export const orderPoemsByDate = ({ poems, direction }: IOrderPoemsFunction) => {
 	return poems.sort((a: IPoem, b: IPoem) => {
-		const poemADate = [a.dateCreated.year.toString(), a.dateCreated.month.toString()].join('');
-		const poemBDate = [b.dateCreated.year.toString(), b.dateCreated.month.toString()].join('');
+		const poemADate =
+			a.dateCreated.year.toString() +
+			a.dateCreated.month.toLocaleString('numeric', { minimumIntegerDigits: 2 });
+		const poemBDate =
+			b.dateCreated.year.toString() +
+			b.dateCreated.month.toLocaleString('numeric', { minimumIntegerDigits: 2 });
 
 		switch (direction) {
 			case 'asc':

@@ -1,8 +1,9 @@
 import { poemsData }  from "../../data/poemsData.ts"
+import { orderPoems } from "../../helper/poemsHandler.ts";
 
 export function load() {
 	return {
-		poems: poemsData.map((poem) => ({
+		poems: orderPoems({ poems: poemsData, type: 'date', direction: 'dsc' }).map((poem) => ({
 			title: poem.title,
 			slug: poem.slug,
 			theme: poem.theme,

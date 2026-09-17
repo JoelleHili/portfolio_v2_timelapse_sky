@@ -51,5 +51,6 @@
     ul{
         list-style-type: none;
         color: var(--text-color);
+		padding: 0;
     }
 </style>
