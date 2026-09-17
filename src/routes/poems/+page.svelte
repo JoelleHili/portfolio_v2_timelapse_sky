@@ -47,7 +47,7 @@
     {/each}
 </ul>
 
-<style lang="scss">
+<style>
     ul{
         list-style-type: none;
         color: var(--text-color);
