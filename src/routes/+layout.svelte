@@ -26,6 +26,8 @@
 		scrollY = { start: 0, end: 0 };
 	};
 
+	const goBack = () => history.back();
+
 	export const prerender = true;
 </script>
 
@@ -53,6 +55,7 @@
 	</section>
 
 	<img class="clouds" src="/clouds.svg" alt="Clouds" />
+	<button class="back_button" onclick={goBack}><h2>&#8592;{" Back"}</h2></button>
 
 	<nav class="nav">
 		<SunNavigation />
@@ -143,6 +146,18 @@
 	.content {
 		margin-top: calc(clamp(40px, 18svh, 320px) + 8px);
 		margin-left: clamp(8px, 5vw, 160px);
+		overflow: scroll;
+		scrollbar-width: thin;
+		mask-image: linear-gradient(to bottom, var(--background-bottom) 90%, transparent 100%);
+		-webkit-mask-image: linear-gradient(to bottom, var(--background-bottom) 90%, transparent 100%);
+
+		@media screen and (max-aspect-ratio: 13/9) {
+			height: 64dvh;
+		}
+
+		@media screen and (min-aspect-ratio: 13/9) {
+			height: 54dvh;
+		}
 	}
 
 	.clouds {
@@ -152,5 +167,19 @@
 		pointer-events: none;
 		height: clamp(40px, 18svh, 320px);
 		position: fixed;
+	}
+
+	.back_button {
+		display: var(--back-button-visibility);
+		border: none;
+		background-color: transparent;
+		height: clamp(40px, 18svh, 320px);
+		position: fixed;
+		margin-left: clamp(8px, 5vw, 160px);
+		cursor: pointer;
+		
+		h2{
+			color: var(--menu-color);
+		}
 	}
 </style>

@@ -10,6 +10,7 @@
 	--background-bottom: #cf5c36;
 	--cloud-visibily: block;
 	--cloud-transform: -10rem;
+	--back-button-visibility: none;
 	--menu-color: #ffc15d;
 	--menu-glow: 0px 0px 20px 8px #ffc15d;
 }
@@ -19,6 +20,7 @@
 	--background-bottom: #f1f7ee;
 	--cloud-visibily: block;
 	--cloud-transform: -20rem;
+	--back-button-visibility: none;
 	--menu-color: #ffe8bb;
 	--menu-glow: 0px 0px 20px 16px #ffe8bb;
 }
@@ -28,6 +30,7 @@
 	--background-bottom: #cf5c36;
 	--cloud-visibily: block;
 	--cloud-transform: -30rem;
+	--back-button-visibility: none;
 	--menu-color: #ffc15d;
 	--menu-glow: 0px 0px 20px 8px #ffc15d;
 }
@@ -37,6 +40,7 @@
 	--background-bottom: #030f12;
 	--cloud-visibily: none;
 	--cloud-transform: -0rem;
+	--back-button-visibility: block;
 	--menu-color: #ffe8bb;
 	--menu-glow: 0px 0px 8px 4px #ffe8bb;
 }
