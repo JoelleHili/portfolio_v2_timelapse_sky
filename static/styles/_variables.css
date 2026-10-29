@@ -39,7 +39,7 @@
 	--back-button-visibility: none;
 	--menu-color: #ffc15d;
 	--menu-glow: 0px 0px 20px 8px #ffc15d;
-	--static-opacity: 0.2;
+	--static-opacity: 0.15;
 }
 [data-theme="Night"] {
 	--accent-color: #030f12;
