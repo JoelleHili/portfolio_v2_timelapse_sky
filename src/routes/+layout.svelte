@@ -37,7 +37,8 @@
 	ontouchstart={(e) => (scrollY.start = e.changedTouches[0].screenY)}
 	ontouchend={(e) => handleSwipe(e)}
 >
-	<img class="noise" src="/noise.svg" alt="Noise" />
+	<div class="noise noise-white"></div>
+	<div class="noise noise-black"></div>
 
 	<section class="social">
 		<a href="https://github.com/JoelleHili" target="_blank" rel="nofollow" aria-label="github-link">
@@ -55,7 +56,7 @@
 	</section>
 
 	<img class="clouds" src="/clouds.svg" alt="Clouds" />
-	<button class="back_button" onclick={goBack}><h2>&#8592;{" Back"}</h2></button>
+	<button class="back_button" onclick={goBack}><h2>&#8592;{' Back'}</h2></button>
 
 	<nav class="nav">
 		<SunNavigation />
@@ -81,6 +82,12 @@
 		initial-value: #f1f7ee;
 	}
 
+	@property --lines {
+		syntax: '<length>';
+		inherits: false;
+		initial-value: 0.00314px;
+	}
+
 	.app {
 		min-height: 100dvh;
 		background: linear-gradient(to top, var(--background-bottom) 0%, var(--background-top) 33%);
@@ -95,51 +102,47 @@
 	}
 
 	.noise {
-		mix-blend-mode: screen;
-		filter: invert(1);
 		position: fixed;
 		width: 100%;
 		height: 100%;
 		pointer-events: none;
-		z-index: 9999;
-		animation: noiseAnim 0.5s infinite;
-		transform: scale(150%);
-		opacity: 0.5;
+		z-index: 100;
+		animation: line-anim 5s infinite;
+		background-color: var(--static);
+		mask: repeating-radial-gradient(
+			circle at center,
+			#000 0,
+			#000 var(--lines),
+			#0000 calc(var(--lines) * 2),
+			#0000 calc(var(--lines) * 80)
+		);
+		opacity: var(--static-opacity);
 	}
 
-	@keyframes noiseAnim {
-		0% {
-			transform: rotateY(200deg);
-		}
-		19% {
-			transform: rotateY(0deg);
-		}
+	.noise-black {
+		background-color: var(--accent-color);
+		mix-blend-mode: exclusion;
+		rotate: random(0deg, 30deg);
+		opacity: calc(var(--static-opacity)- 50%);
+	}
+
+	.noise-white {
+		background-color: var(--text-color);
+		mix-blend-mode: lighten;
+	}
+
+	@keyframes line-anim {
 		20% {
-			transform: rotateX(180deg);
-		}
-		39% {
-			transform: rotateY(0deg);
+			--lines: 0.001234px;
 		}
 		40% {
-			transform: rotateY(220deg);
-		}
-		59% {
-			transform: rotateY(0deg);
+			--lines: 0.002341px;
 		}
 		60% {
-			transform: rotateX(160deg);
-		}
-		79% {
-			transform: rotateY(0deg);
+			--lines: 0.003412px;
 		}
 		80% {
-			transform: rotateY(240deg);
-		}
-		99% {
-			transform: rotateY(0deg);
-		}
-		100% {
-			transform: rotateX(140deg);
+			--lines: 0.004123px;
 		}
 	}
 
@@ -177,8 +180,8 @@
 		position: fixed;
 		margin-left: clamp(8px, 5vw, 160px);
 		cursor: pointer;
-		
-		h2{
+
+		h2 {
 			color: var(--menu-color);
 		}
 	}

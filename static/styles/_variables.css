@@ -3,8 +3,10 @@
 :root {
 	--text-color: #f1f7ee;
 	--link-text-color: #0b3c49;
-	--menu-size: clamp(124px, 20dvh ,200px);
+	--menu-size: clamp(124px, 20dvh, 200px);
 	--menu-size-hovering: calc(var(--menu-size) + 20px);
+	--lines: 0.0001px;
+	--static: #7A8380;
 }
 [data-theme="Morning"] {
 	--accent-color: #0b3c49;
@@ -15,6 +17,7 @@
 	--back-button-visibility: none;
 	--menu-color: #ffc15d;
 	--menu-glow: 0px 0px 20px 8px #ffc15d;
+	--static-opacity: 0.2;
 }
 [data-theme="Noon"] {
 	--accent-color: #468189;
@@ -25,6 +28,7 @@
 	--back-button-visibility: none;
 	--menu-color: #ffe8bb;
 	--menu-glow: 0px 0px 20px 16px #ffe8bb;
+	--static-opacity: 0.2;
 }
 [data-theme="Evening"] {
 	--accent-color: #0b3c49;
@@ -35,6 +39,7 @@
 	--back-button-visibility: none;
 	--menu-color: #ffc15d;
 	--menu-glow: 0px 0px 20px 8px #ffc15d;
+	--static-opacity: 0.2;
 }
 [data-theme="Night"] {
 	--accent-color: #030f12;
@@ -45,4 +50,5 @@
 	--back-button-visibility: block;
 	--menu-color: #ffe8bb;
 	--menu-glow: 0px 0px 8px 4px #ffe8bb;
+	--static-opacity: 0.15;
 }

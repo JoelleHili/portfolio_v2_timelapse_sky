@@ -94,7 +94,7 @@
 		background-color: var(--menu-color);
 		box-shadow: var(--menu-glow);
 		bottom: calc((var(--menu-size) / 3) * -1);
-		z-index: 99;
+		z-index: 98;
 		width: var(--menu-size);
 		height: var(--menu-size);
 		position: fixed;
@@ -114,7 +114,7 @@
 	}
 
 	.sun-navigation__hide {
-		z-index: 100;
+		z-index: 99;
 		align-self: center;
 	}
 
